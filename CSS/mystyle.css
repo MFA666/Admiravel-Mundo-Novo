@@ -1,0 +1,397 @@
+
+
+/* 
+   1. CORES DO SITE */
+
+:root {
+  --cor-fundo: #101014;
+  --cor-main: #8b0000;
+  --cor-main-dark: #430000;
+  --cor-fonte: #ffffff;
+  --jogadorX: #292929;
+}
+
+
+/* 
+   2. CONFIGURAÇÕES GERAIS
+   */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fundo e fonte padrão */
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+  font-family: Arial, sans-serif;
+}
+
+/* Fonte Nosifer nos títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nosifer', cursive;
+  color: #ff3333;
+}
+
+/* Fonte Nosifer no nome do site */
+.navbar-brand,
+.navbar-brand span {
+  font-family: 'Nosifer', cursive;
+}
+
+
+/* 
+   3. BARRA DE NAVEGAÇÃO
+    */
+
+.bg-cor-que-eu-quero {
+  background-color: #080808;
+  border-bottom: 2px solid #a00000;
+}
+
+/* Nome do site */
+.navbar-brand {
+  color: #ff3333;
+  font-size: 1.2rem;
+}
+
+/* Efeito no nome do site */
+.navbar-brand:hover {
+  color: #ffffff;
+}
+
+/* Posicionamento do menu */
+#navbar-items .navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Links do menu */
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+/* Efeito ao passar o mouse */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ff3333;
+}
+
+/* Botão do menu em telas pequenas */
+.navbar-toggler {
+  border-color: #a00000;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+
+/* 
+   4. TÍTULOS E CONTAINERS
+    */
+
+#titulo {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Área principal do site */
+.principal {
+  display: block;
+  width: 100%;
+}
+
+/* Espaçamento abaixo da barra de navegação */
+#container-top {
+  margin-top: 5rem;
+}
+
+/* Centraliza os títulos das duas colunas */
+#titulo {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Espaçamento superior */
+#container-top {
+  margin-top: 5rem;
+}
+
+/* Títulos principais */
+#titulo h1,
+#titulo h2,
+#titulo h3,
+#titulo h4,
+#titulo h5 {
+  font-family: 'Nosifer', cursive;
+  color: #ff3333;
+}
+
+
+/* 
+   5. TABULEIRO DO JOGO DA VELHA
+    */
+
+.tabuleiro {
+  width: min(27rem, 100%);
+  margin: 0.5rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+/* Cada quadrado do jogo */
+.celula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  aspect-ratio: 1;
+  min-width: 0;
+
+  background-color: #222222;
+  border: 2px solid #8b0000;
+
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.25);
+}
+
+/* Imagens dos jogadores */
+.celula img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+/* Efeito ao passar o mouse */
+.celula:hover {
+  background-color: #3a1010;
+}
+
+/* Mensagem de vez, vitória ou empate */
+.status {
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+/* 
+   6. CARROSSEL DE FILMES
+    */
+
+#slider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  border: 2px solid #8b0000;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
+}
+
+/* Imagens do carrossel */
+#slider .carousel-item img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Legendas do carrossel */
+#slider .carousel-caption {
+  bottom: 1em;
+}
+
+/* Títulos das imagens */
+#slider .carousel-caption h4,
+#slider .carousel-caption h5 {
+  font-family: 'Nosifer', cursive;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+/* Botões dentro do carrossel */
+#slider .btn {
+  padding: 0.3em 0.7em;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+/* Setas de navegação */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.7;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  color: #ffffff;
+  font-size: 3em;
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators [data-bs-target] {
+  background-color: #dddddd;
+  opacity: 0.8;
+}
+
+.carousel-indicators .active {
+  background-color: #ff3333;
+  opacity: 1;
+}
+
+
+/* 
+   7. BOTÕES PERSONALIZADOS
+    */
+
+.btn {
+  border-radius: 6px;
+}
+
+/* Botões vermelhos do Bootstrap */
+.btn-primary {
+  --bs-btn-bg: #8b0000;
+  --bs-btn-border-color: #8b0000;
+  --bs-btn-color: #ffffff;
+
+  --bs-btn-hover-bg: #b30000;
+  --bs-btn-hover-border-color: #b30000;
+  --bs-btn-hover-color: #ffffff;
+
+  --bs-btn-active-bg: #650000;
+  --bs-btn-active-border-color: #650000;
+  --bs-btn-active-color: #ffffff;
+}
+
+/* Efeito de transição */
+.btn-primary {
+  transition: background-color 0.3s ease;
+}
+
+
+/* 
+   8. CARTÃO SOBRE O PROJETO
+   */
+
+.card {
+  background-color: #1c1c1c;
+  border: 2px solid #8b0000;
+  color: #ffffff;
+}
+
+/* Título do cartão */
+.card-title {
+  font-family: 'Nosifer', cursive;
+  color: #ff3333;
+}
+
+/* Texto do cartão */
+.card-text {
+  font-family: Arial, sans-serif;
+  color: #eeeeee;
+}
+
+/* Espaçamento dos botões */
+.card .btn {
+  margin: 0.25rem;
+}
+
+
+/* 9. TEXTOS */
+
+.texto {
+  font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Parágrafos */
+p {
+  line-height: 1.6;
+}
+
+
+/*
+   10. ÍCONES
+    */
+
+/* Mantido para possíveis ícones do carrossel */
+i {
+  font-size: 2.5em;
+  margin: 0.125em;
+}
+
+
+/*=
+   11. RESPONSIVIDADE
+    */
+
+/* Telas de tablets e computadores */
+@media (min-width: 768px) {
+
+  #slider .carousel-caption {
+    bottom: 1em;
+  }
+
+  #slider .carousel-caption h4,
+  #slider .carousel-caption h5 {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px #000000;
+  }
+
+  #slider .btn {
+    padding: 0.6em 1em;
+    font-size: 1em;
+    margin-top: 1em;
+  }
+
+  .carousel-indicators {
+    bottom: 0.25em;
+  }
+}
+
+/* Telas pequenas */
+@media (max-width: 576px) {
+
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  #slider .carousel-item img {
+    height: 240px;
+  }
+
+  #slider .carousel-caption h4,
+  #slider .carousel-caption h5 {
+    font-size: 0.85rem;
+  }
+
+  #slider .btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .status {
+    font-size: 0.9rem;
+  }
+}
+
+/* Personalização do menu hambúrguer */
+.navbar-toggler {
+    border: 1px solid #8b0000;
+    background-color: transparent;
+}
+
+/* Cor vermelha dos três risquinhos */
+.navbar-toggler .bi-list {
+    color: #8b0000 !important;
+    font-size: 30px;
+}

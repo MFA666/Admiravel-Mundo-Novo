@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game the Velha</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+
+
+       <!-- Fonte do projeto: Nosifer. (Esse conjunto de códigos permite utilizar a fonte chamada Nosifer,
+         disponibilizada pelo Google Fonts, para personalizar a aparência dos textos do site.)   -->
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS (Importa o Bootstrap, uma biblioteca de estilos CSS que facilita a criação de sites organizados,
+      modernos e adaptáveis a diferentes tamanhos de tela.)-->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+        <!-- Bootstrap Icons (Importa uma biblioteca de ícones que podem ser utilizados no site, 
+         como símbolos de casa, telefone, usuário, pesquisa e redes sociais.)  -->
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    
+    </head>
+<body>
+     
+    <header>    
+                 <!-- Esse bloco cria o cabeçalho do site-->
+        <nav class="navbar navbar-expand-lg fixed-top bg-cor-que-eu-quero"> 
+            <section class="container py-1">  <!-- Esse py-1 adiciona um pequeno espaçamento interno na parte superior e inferior.-->
+                <a class="navbar-brand" href="#"> <!--o navbar-brand identifica o nome ou logotipo principal do site.-->
+                    <img class="img-fluid" width="40em" src="img/Jason.PNG.png" alt="Cadê a imagem">
+                    <span>Especial de Halloween</span> <!--nome que fica no cabeçalho da pagina-->
+                </a>
+
+                 <!--Esse bloco cria um botão que permite abrir e fechar o menu de navegação em telas menores, como celulares e tablets.-->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                    aria-controls="navbar-items" aria-expanded="false" aria-label="Navegação diferente">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                 <!--Esse bloco cria os itens do menu de navegação, permitindo que o usuário acesse diferentes partes do site, como Home, História, Sobre, Dicas e Contato.-->
+                <section class="collapse navbar-collapse" id="navbar-items">
+                   
+         <!-- Menu de navegação do Halloween Special -->
+        <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+
+         <!-- Volta para a página principal -->
+          <li class="nav-item">
+           <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+         <!-- Abre a página sobre a história do Halloween -->
+         <li class="nav-item">
+         <a class="nav-link" href="historia.html">História</a>
+         </li>
+
+        <!-- Abre a página de dicas de filmes -->
+       <li class="nav-item">
+        <a class="nav-link" href="dicas.html">Dicas</a>
+       </li>
+
+    </ul>
+
+                </section>
+            </section>
+        </nav>
+    </header>
+ 
+      <!--Cria a área principal do site e organiza o conteúdo em uma estrutura que facilita o posicionamento dos elementos na tela.-->
+   <main class="principal">
+
+        <section class="container" id="container-top">
+
+             <!--Cria uma área destinada ao título do jogo, definindo seu tamanho, alinhamento e aparência.-->
+            <section class="row g-2">
+                <section class="col-12 col-md-6" id="titulo">
+                    <section class="col-12 text-center">
+                        <h4 class="primary-color">Jogo da velha</h4>
+                    </section>
+                    
+
+               <!--Cria o tabuleiro do jogo da velha, formado por nove espaços que representam as posições-->
+                  <section class="tabuleiro">
+                  <section class="celula" data-celula></section>
+                    <section class="celula" data-celula></section>
+                    <section class="celula" data-celula></section>
+                     <section class="celula" data-celula></section>
+                    <section class="celula" data-celula></section>
+                    <section class="celula" data-celula></section>
+                    <section class="celula" data-celula></section>
+                    <section class="celula" data-celula></section>
+                   <section class="celula" data-celula></section>
+                    </section>
+
+             <!--Cria uma área responsável por informar qual jogador deve realizar a próxima jogada.-->
+              <section class="status text-center mt-2">
+                <p>É a vez do Vamp</p>
+                 </section>
+
+         
+</section>
+
+    <!-- Abre a coluna direita, destinada ao carrossel de filmes -->
+       <section class="col-12 col-md-6">
+
+    <!--Esse bloco cria a estrutura inicial do Slide Show, definindo seu espaço na página e apresentando um título centralizado,
+    utilizando classes do Bootstrap para adaptar o conteúdo a diferentes tamanhos de tela. -->
+    <section class="col-12 text-center">
+        <h4 class="primary-color">Horror movies</h4>
+    </section>
+
+    <!--: Esse bloco cria e configura o carrossel de imagens, utilizando recursos do Bootstrap
+    para realizar transições automáticas a cada 3 segundos, permitindo apresentar diferentes conteúdos de forma dinâmica.-->
+    <section class="container" id="container-carousel">
+        <section class="carousel slide" id="slider" data-bs-ride="carousel" data-bs-interval="3000">
+
+                           
+          <!--Esse bloco cria os indicadores de navegação do carrossel, permitindo selecionar manualmente cada imagem. 
+          Os botões são conectados ao carrossel por meio de atributos do Bootstrap e incluem recursos de acessibilidade.-->
+           <section class="carousel-indicators">
+            <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0"
+            aria-current="true" aria-label="Slide 1"></button>
+
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="1"
+             aria-label="Slide 2"></button>
+
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+            </section>
+
+        
+<!-- Área das imagens do carrossel -->
+<section class="carousel-inner">
+
+    <!-- Primeira imagem -->
+    <section class="carousel-item active">
+        <img class="d-block w-100"
+             src="img/iluminado.JPEG"
+             alt="Imagem de Halloween 1">
+
+        <section class="carousel-caption">
+            <h4>O Iluminado</h4>
+        <a href="https://melkberg.com/2020/10/21/resumo-explicacao-filme-o-iluminado/"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer">
+            Conheça o filme
+        </a>
+        </section>
+    </section>
+
+    <!-- Segunda imagem -->
+    <section class="carousel-item">
+        <img class="d-block w-100"
+             src="img/bruxa.JPEG"
+             alt="Imagem de Halloween 2">
+
+        <section class="carousel-caption">
+            <h4>A Bruxa</h4>
+           <a href="https://www.unifal-mg.edu.br/portal/2021/10/29/resenha-do-filme-a-bruxa-transgressor-intenso-e-dramatico-na-medida-certa-para-quem-aprecia-terror-psicologico-por-bianca-maia-roque/"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">
+            Conheça o fime
+        </a>
+        
+        </section>
+    </section>
+
+    <!-- Terceira imagem -->
+    <section class="carousel-item">
+        <img class="d-block w-100"
+             src="img/transilvania.JPEG"
+             alt="Imagem de Halloween 3">
+
+        <section class="carousel-caption">
+            <h4>Hotel Transilvânia</h4>
+           <a href="https://ims.com.br/filme/hotel-transilvania/"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">
+            Conheça o filme
+</a>
+            </a>
+        </section>
+    </section>
+
+</section>
+
+ <!-- Fim do slider -->
+                    </section>
+
+              <!--Esse bloco cria um cartão de informações utilizando o Bootstrap, 
+              organizando seu conteúdo em uma estrutura visual que se adapta aos diferentes tamanhos de tela.-->
+             <section class="col-12 mb-3 mb-sm-0">
+               <section class="card">
+                 <section class="card-body">
+
+                     <!--Esse bloco apresenta informações sobre o autor do projeto e disponibiliza botões
+                      que podem direcionar os visitantes para seu portfólio e outras informações.-->
+                     <h5 class="card-title">Sobre o autor</h5>
+                     <p class="card-text">Para ver o portfólio do autor, clique abaixo.</p>
+                     <a href="portifolio.html" class="btn btn-primary">
+                      Meu Portfólio
+                       </a>
+
+                   <a href="curiosidades.html" class="btn btn-primary">
+                  Curiosidades
+                  </a>
+
+    
+                </section> <!-- Fecha card-body -->
+            </section> <!-- Fecha card -->
+        </section> <!-- Fecha a estrutura interna do cartão -->
+
+    </section> <!-- Fecha a coluna direita do carrossel -->
+
+    <!-- Fim da row -->
+    </section>
+
+    <!-- Fim do container principal -->
+    </section>
+
+</main>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- JS do projeto -->
+ <script src="JS/js/script.js"></script>
+</body>
+
+</html>  
