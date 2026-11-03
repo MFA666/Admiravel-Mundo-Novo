@@ -102,13 +102,26 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Área principal do site */
 .principal {
-  display: block;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Espaçamento abaixo da barra de navegação */
+/* Container que organiza o jogo e os filmes */
 #container-top {
-  margin-top: 5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 1rem;
+}
+
+/* Centraliza as duas colunas */
+#container-top > .row {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Centraliza os títulos das duas colunas */
@@ -357,6 +370,31 @@ i {
     bottom: 0.25em;
   }
 }
+/* Centralização em celulares e tablets */
+@media (max-width: 767px) {
+
+  .principal {
+    align-items: flex-start;
+    padding-top: 70px;
+  }
+
+  #container-top {
+    margin-top: 1rem;
+  }
+
+  #container-top > .row {
+    justify-content: center;
+  }
+
+  .tabuleiro {
+    width: min(27rem, 100%);
+  }
+
+  #slider {
+    margin-top: 1rem;
+  }
+}
+
 
 /* Telas pequenas */
 @media (max-width: 576px) {
@@ -394,4 +432,100 @@ i {
 .navbar-toggler .bi-list {
     color: #8b0000 !important;
     font-size: 30px;
+}
+
+
+/*
+   DECORAÇÕES DE HALLOWEEN NO FUNDO
+ */
+
+/* Camada que ocupa toda a tela */
+.decoracoes {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Configuração geral das imagens */
+.decor {
+  position: absolute;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.3));
+}
+
+/* Abóboras */
+.abobora1 {
+  width: 130px;
+  top: 15%;
+  left: 2%;
+}
+
+.abobora2 {
+  width: 110px;
+  top: 65%;
+  right: 3%;
+}
+
+.abobora3 {
+  width: 100px;
+  bottom: 3%;
+  left: 25%;
+}
+
+/* Fantasminhas */
+.fantasma1 {
+  width: 150px;
+  top: 25%;
+  right: 2%;
+}
+
+.fantasma2 {
+  width: 130px;
+  bottom: 8%;
+  right: 25%;
+}
+
+/* Morcegos */
+.morcego1 {
+  width: 120px;
+  top: 55%;
+  left: 3%;
+}
+
+/* Mantém o conteúdo na frente das decorações */
+header {
+  position: relative;
+  z-index: 10;
+}
+
+.principal {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 576px) {
+
+  .abobora1,
+  .abobora2,
+  .abobora3 {
+      width: 65px;
+      opacity: 0.35;
+  }
+
+  .fantasma1,
+  .fantasma2 {
+      width: 80px;
+      opacity: 0.35;
+  }
+
+  .morcego1 {
+      width: 65px;
+      opacity: 0.35;
+  }
 }
